@@ -1,0 +1,49 @@
+.movieCard{
+    text-align: center;
+    padding: 1rem;
+    margin: .5rem;
+    position: relative;
+     transition: .27s ease-in-out;
+   cursor: pointer;
+  
+}
+.movieCard:hover{
+    box-shadow: 0px 0px 9px 5px rgb(255, 0, 0);
+}
+
+.image {
+    display: block;
+    width: 400px;
+    height:450px !important;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #0d062873;
+  }
+  
+  .movieCard:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: #48CEF7;
+    margin-top: 3rem;
+  }
+
+
+  .subjectMovie{
+    height: 300px;
+  }
+
+
+

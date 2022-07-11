@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - NW Admin</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css"
+      rel="stylesheet"
+    />
+    <link href="../../css/styles.css" rel="stylesheet" />
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+      <!-- Navbar Brand-->
+      <a class="navbar-brand ps-3" href="/dashboard">
+        <img
+          width="150"
+          height="60"
+          src="../../img/logo.png"
+          alt=""
+          srcset=""
+        />
+      </a>
+      <!-- Sidebar Toggle-->
+      <button
+        class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+        id="sidebarToggle"
+        href="#!"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Navbar Search-->
+      <div class="col-auto col-sm-auto col-md-4 col-lg-3"></div>
+      <!-- Navbar-->
+
+      <div class="col-auto col-sm-auto col-md-4 col-lg-7"></div>
+
+      <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdown"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            ><i class="fas fa-user fa-fw"></i
+          ></a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            <li>
+              <a class="dropdown-item" href="/dashboard/setting">Ayarlar</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <form action="/admin/logout" method="post">
+              <li>
+                <input type="submit" class="dropdown-item" value="çıkış Yap" />
+              </li>
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+          <div class="sb-sidenav-menu">
+            <div class="nav">
+              <div class="sb-sidenav-menu-heading">Filmler</div>
+              <a class="nav-link" href="/dashboard/all-movies">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Tüm Filmler
+              </a>
+              <a class="nav-link" href="/dashboard/action-movie">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Aksiyon Filmleri
+              </a>
+
+              <a class="nav-link" href="/dashboard/advanture-movie">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Macera Filmleri
+              </a>
+
+              <a class="nav-link" href="/dashboard/comedy-movie">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Komedi Filmleri
+              </a>
+
+              <a class="nav-link" href="/dashboard/science-fiction-movie">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Bilim Kurgu Filmleri
+              </a>
+              <a class="nav-link" href="/dashboard/romantizm-movie">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Romantizim Filmleri
+              </a>
+              <a class="nav-link" href="/dashboard/history-movie">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Tarihi Filmleri
+              </a>
+              <a class="nav-link" href="/dashboard/dram-movie">
+                <div class="sb-nav-link-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                Dram Filmleri
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div id="layoutSidenav_content">
+        <main><%-body %></main>
+
+        <!---
+              <footer class="py-4 bg-light mt-auto bg-dark">
+              <div class="container-fluid px-4">
+                <div class="">
+                    <div class="text-center text-white">Copyright &copy; Your Website 2022</div>
+                   
+                </div>
+              </div>
+              </footer>
+              -->
+      </div>
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../js/scripts.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../js/datatables-simple-demo.js"></script>
+  </body>
+</html>

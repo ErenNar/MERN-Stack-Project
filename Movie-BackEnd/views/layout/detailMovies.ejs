@@ -1,0 +1,68 @@
+
+<script src="../../js/ckeditor/ckeditor.js"></script>
+<script src="../../js/ckeditor/adapters/jquery.js"></script>
+
+
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="row justify-content-start">
+          <h1>Film Detay</h1>
+          <hr>
+          <div class="col-auto">
+            <img
+            src="<%=findID.movieImg %> "
+            width="400"
+            height="600"
+            alt=""
+            />
+        </div>
+        <div class="col-6">
+
+      
+                <h4><%=findID.movieTitle %></h4>
+                
+                
+                <%=findID.movieSubject  %> 
+               
+                <div class="overflow-scroll" id="rich" height="100">
+                </div>
+
+                    
+        
+                  
+               
+
+              
+                  
+                 
+               
+               
+                </div>
+                   
+                <p><%=findID.movieActress %></p>
+             
+                <p><%=findID.movieCategory %></p>
+           
+                <p><%=findID.movieTimer %></p>
+             
+                <p><%=findID.movieImdb %></p>
+             
+              </div>
+              <div class="col-auto mt-5">
+                  <video width="1000" height="600" controls poster="<%=findID.movieImg  %> " >
+                    <source src="<%=findID.movieVideo %>"  type="video/mp4">
+                  </video>
+              </div>
+               
+           
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+
+</script>

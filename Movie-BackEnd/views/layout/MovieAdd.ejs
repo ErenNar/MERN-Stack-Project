@@ -1,0 +1,151 @@
+<script src="../../js/ckeditor/ckeditor.js"></script>
+<script src="../../js/ckeditor/adapters/jquery.js"></script>
+
+
+<article id="article">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12">
+        <h2>Film Ekle</h2>
+
+        <hr />
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form
+          method="post"
+          action="/dashboard/all-movies/add"
+          enctype="multipart/form-data"
+          class="my-5"
+          id=""
+        >
+          <label for="avatar" class="form-label">Film Resmi</label>
+          <input
+            accept="image/*"
+            type="file"
+            name="avatar"
+            class="form-control"
+            id="avatar"
+          />
+          <br />
+          <label for="movieTitle" class="form-label">Film Adı</label>
+          <input
+            type="text"
+            name="movieTitle"
+            class="form-control"
+            id="movieTitle"
+          />
+          <br />
+          <label for="movieSubject" class="form-label">Film Konusu</label>
+          <textarea
+            class="ckeditor"
+            name="movieSubject"
+            id="editor1 movieSubject"
+            rows="10"
+            cols="80"
+          >
+          </textarea>
+          <br />
+          <label for="movieDirector" class="form-label">Yönetmen</label>
+          <input
+            type="text"
+            name="movieDirector"
+            class="form-control"
+            id="movieDirector"
+          />
+          <br />
+          <label for="movieActress" class="form-label">Oyuncular</label>
+          <input
+            type="text"
+            name="movieActress"
+            class="form-control"
+            id="movieActress"
+          />
+          <br />
+          <label for="movieYear" class="form-label">Yıl</label>
+          <input
+            type="number"
+            name="movieYear"
+            class="form-control"
+            id="movieYear"
+          />
+          <br />
+          <label for="movieCategory" class="form-label">Kategori</label>
+          <select
+            id="movieCategory"
+            name="movieCategory"
+            class="form-select"
+            aria-label="Default select example"
+          >
+            <option selected>Seçimler</option>
+            <option value="Aksiyon">Aksiyon</option>
+            <option value="Macera">Macera</option>
+            <option value="Komedi">Komedi</option>
+            <option value="Bilim Kurgu">Bilim Kurgu</option>
+            <option value="Romantizim">Romantizim</option>
+            <option value="Tarih">Tarih</option>
+            <option value="Dram">Dram</option>
+          </select>
+          <br />
+          <label for="movieTimer" class="form-label">Süre</label>
+          <input
+            type="text"
+            name="movieTimer"
+            class="form-control"
+            id="movieTimer"
+          />
+          <br />
+          <label for="movieImdb" class="form-label">Imdb</label>
+          <input
+          type="number"
+            name="movieImdb"
+            class="form-control"
+            id="movieImdb"
+            step="0.1"
+          />
+          <br />
+          <label for="movieVideo" class="form-label">Video</label>
+          <input
+            type="file"
+            name="movieVideo"
+            class="form-control"
+            id="movieVideo"
+            accept="video/*"
+          />
+          <br />
+          <br />
+
+          <input type="submit" class="btn btn-success" value="Ekle" />
+        </form>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script src="../../js/jquery.js"></script>
+<script>
+  /* const form = `
+  <form action="" id="form">
+    <input type="file" placeholder="carausel ekle" class="form-control" name="yukle[]" id="" /> <br />
+    <input type="text" placeholder="başlık Ekle"  class="form-control" name="yukle[]" id="" /> <br>    
+    <textarea class="ckeditor" name="editor1" id="editor1" rows="10" cols="80">  </textarea> </form>` 
+  
+  $(document).ready(function () {
+    $("#add").click(function () {
+      $("form:last").after( form );
+    });
+    
+    $('#remove').click(function(){
+      let form = $('form').length;
+       if(form > 2 ){
+         $('#form').remove()
+        }
+    })
+  });
+
+  */
+</script>

@@ -1,0 +1,113 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.navigasyon{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #0D0628;
+    
+}
+
+.a1{  
+    font-size: 1.2rem;
+    color: #48CEF7 !important; 
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    position: relative;
+    text-decoration: none !important;
+}
+
+.a1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #48CEF7;
+    transition: width 0.25s ease-out;
+
+}
+
+.a1:hover::before{
+    width: 100%;
+
+}
+
+.a2{  
+    font-size: 1.2rem;
+    color: #0E2D4F !important; 
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    position: relative;
+    text-decoration: none !important;
+}
+
+.a2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #48CEF7;
+    transition: width 0.25s ease-out;
+
+}
+
+.a2:hover::before{
+    width: 100%;
+
+}
+
+
+.footer{
+    padding: 1rem;
+    position:initial;
+    bottom: 0;
+    width: 100%;
+    background-color: #0D0628;
+}
+.footer-text{
+    color: #48CEF7;
+}
+
+main{
+    background-image: url("../images/baner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+  }
+  
+
+  .scrollOF{
+    display: none;
+   
+  
+  }
+
+  .scrollON{
+    display: block;
+    position:fixed;
+   
+    bottom: 5rem;
+    right: 5rem;
+    
+  
+  }

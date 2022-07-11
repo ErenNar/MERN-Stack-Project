@@ -1,0 +1,33 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="heading-1">Admin Profil</h1>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-6 ">
+            <% error.forEach(element => { %>
+                <div class=" alert alert-danger">  <%- element.msg %> </div>
+            <% }) %>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form action="/dashboard/setting" method="post">
+                <input type="mail" class="form-control" name="mail" placeholder="new mail" > <br>
+                <input type="password" class="form-control" name="repassword" placeholder="before paswword"> <br>
+                <input type="password" class="form-control" name="password" placeholder="new paswword"> <br>
+                <input class="btn btn-success"  type="submit" value="Güncelle">
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<ul>
+  <% findData.forEach(item => { %>
+  <li>
+    <img width="80" height="80" src="<%=item.movieImg%>" alt="" />
+    <a href="/dashboard/all-movies/<%=item._id %> "> <%=item.movieTitle %> </a>
+  </li>
+  <% }) %>
+</ul>
